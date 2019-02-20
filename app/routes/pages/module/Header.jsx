@@ -6,28 +6,35 @@ import { browserHistory } from 'react-router'
 import {getweather} from '../api/ajax'
 import logo from '../../../img/comp/common_logo.png'
 
-const navlist=['首页','购卡'];
+const navlist=[
+  {
+    name:'首页',
+    url:'index'
+  },{
+    name:'购卡',
+    url:'buycard'
+  }
+  
+];
 let Header = React.createClass({
 
   getInitialState(){
     return{
-      act:0
+      
     }
   },
   
   componentDidMount () {
        
   },
-  changenav(key){
-    this.setState({
-      act:key
-    })
+  changenav(url){
+    browserHistory.push('/home/main/'+url)
   },
 
   render() {
+   let{params}=this.props;
    
-    let{act}=this.state;
-    
+  
     return (
       <div className={styles.Headerbox}>
 
@@ -55,7 +62,7 @@ let Header = React.createClass({
             {
               navlist.map((val,key)=>{
                 return(
-                  <li className={act==key?styles.act:styles.noact} onClick={()=>this.changenav(key)} key={key}>{val}</li>
+                  <li className={params.page==val.url?styles.act:styles.noact} onClick={()=>this.changenav(val.url)} key={key}>{val.name}</li>
                 )
               })
             }

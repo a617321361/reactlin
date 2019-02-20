@@ -42,13 +42,18 @@ let Component = React.createClass({
         let that=this;
         timer=setInterval(()=>{
             let len=imgurl.length-this.state.imgkey-1;
+            // console.log(5545454)
             that.setState({
                 imgkey:len
             })
         },3000)
     },
+    componentWillUnmount(){//离开页面前终断定时器
+        clearInterval(timer);
+    },
     changebanner(key){
         if(key!=this.state.imgkey){
+            
             this.setState({
                 imgkey:key
             })

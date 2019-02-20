@@ -5,7 +5,7 @@ import actions from '../fengui/redux/actions'
 import {browserHistory} from 'react-router'
 import Notpage from '../../../comps/NotFoundPage'
 import Home from '../comp/index/index'
-import Safer from '../comp/safe/safer'
+import Buycard from '../comp/buycard/index'
 import Shield from '../comp/shield/shield'
 
 let Component = React.createClass({
@@ -19,8 +19,8 @@ let Component = React.createClass({
             case 'index':{
             fillform = <Home params={params} />
           }break;
-          case 'safer':{
-            fillform = <Safer params={params} />
+          case 'buycard':{
+            fillform = <Buycard params={params} />
           }break;
           case 'shield':{
             fillform = <Shield params={params} />

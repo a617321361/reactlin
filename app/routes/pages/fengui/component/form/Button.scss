@@ -1,0 +1,47 @@
+.btnContainer {
+  padding: 15px;
+}
+
+.btn {
+  outline: none;
+  background-color: #FF6200;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1;
+  padding: 14px 0;
+  border: 1px solid #FF6200;
+  border-radius: 1px;
+  max-width: 450px;
+  &:focus {
+    background-color: #F24E14;
+  }
+  &:disabled {
+    background-color: #DDDDDD;
+    border: 1px solid #DDDDDD;
+  }
+  span {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+div.btnGroup {
+  max-width: 450px;
+  margin: 0 auto;
+  div {
+    float: left;
+    border-right: 1px solid #ffceb8;
+    &.disabled {
+      border-right: 1px solid #fff;
+    }
+    &:last-child {
+      border-right: 0;
+    }
+    .btnContainer {
+      padding: 0;
+      width: 100%;
+    }
+  }
+}

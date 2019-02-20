@@ -1,0 +1,159 @@
+.indexpage{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+  .bannerbox{
+      width: 100%;
+      position: relative;
+      .banner{
+        position: relative;
+        margin: 0 auto;
+        width: 1000px;
+        height: 400px;
+        background: #f8f8f8
+      }
+      .bannerselectbar{
+        position: absolute;
+        list-style: none;
+        text-align: center;
+        bottom: 40px;
+        left: 462px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 10px;
+        float: left;
+        height: 20px;
+        
+        background-color: rgba(0,0,0,0.5);
+        img{
+            padding: 0;
+            width: 20px;
+            margin: 0 5px 0 5px;
+            float: left;
+            
+        }
+        .act{
+            width: 10px;
+            height: 10px;
+            margin-top: 5px;
+        }
+        .noact{
+            width: 6px;
+            height: 6px;
+            margin-top: 7px;
+        }
+      }
+  }
+
+
+  .carlist{
+    margin: 0 auto;
+    padding: 0;
+    width: 1080px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-top: 64px;
+    ul{
+        overflow: hidden;
+        margin-bottom: 50px;
+        li{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            overflow: hidden;
+            //float: left;
+            .liitem{
+                overflow: hidden;
+                .floor{
+                    margin-bottom: 10px;
+                    vertical-align: middle;
+                    float: left;
+                    font-size: 20px;
+                    color: #FF3c00;
+                }
+                .title{
+                    margin-bottom: 10px;
+                    vertical-align: middle;
+                    float: left;
+                    font-size: 20px;
+                    color: #3c3c3c;
+                    margin-left: 12px;
+                }
+                .line{
+                    display: inline;
+                    float: right;
+                    height: 1px;
+                    width: 100%;
+                    background-color: #e5e5e5;
+                    margin-bottom: 0;
+                }
+                
+            }
+            .caritem{
+                position: relative;
+                width: 1112px;
+                float: left;
+               // margin-left: -40px;
+                padding-bottom: 20px;
+
+                .card{
+                    float: left;
+                    vertical-align: middle;
+                    text-align: center;
+                    height: 278px;
+                    width: 232px;
+                    margin-left: 22px;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                    border-radius: 0 0 3px 3px;
+                    cursor: pointer;
+                    img{
+                        width: 196px;
+                        height: 116px;
+                        margin: 50px 0 auto;
+                    }
+                    .txt{
+                        width: 232px;
+                        margin-top: 8px;
+                        margin-bottom: 10px;
+                    }
+                    .price{
+                        color: #fb481f;
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                        margin-top: 8px;
+                    }
+                    .enjoygwc{
+                       
+                        height: 38px;
+                        background-color: #6cb5ff;
+                        color: #fff;
+                        text-align: right;
+                        line-height: 38px;
+                        font-size: 12px;
+                        padding: 0 16px;
+                        cursor: pointer;
+                        box-sizing: border-box;
+                        
+                    }
+                }
+                .cardact{
+                    border: 1px solid #6cb5ff;
+                    box-shadow:  3px 5px 10px #6cb5ff;
+                }
+            }
+            
+        }
+    }
+  }
+
+
+  .footerBox{
+      width: 100%;
+      height: 120px;
+      background-color: #fafafa;
+  }
+
+
+}

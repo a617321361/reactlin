@@ -1,0 +1,75 @@
+.this {
+  background: #fff;
+  height: 0.88rem;
+  line-height: 0.86rem;
+  .item {
+    overflow: hidden;
+    padding-left: 0.3rem;
+    position: relative;
+    .title {
+      font-size: 0.28rem;
+      color: #999999;
+      float: left;
+      line-height: 0.86rem;
+    }
+    .unSubTitle {
+      font-size: 0.28rem;
+      color: #666666;
+      float: left;
+      line-height: 0.86rem;
+    }
+    .importTitle {
+      font-size: 0.28rem;
+      color: #333333;
+      float: left;
+      line-height: 0.86rem;
+    }
+    .subTitle {
+      float: left;
+      margin-left: 0.3rem;
+      margin-right: 0.3rem;
+      color: #666666;
+      font-size: 0.28rem;
+      line-height: 0.86rem;
+    }
+    .subTitleLeft {
+      position: absolute;
+      height: 0.88rem;
+      line-height: 0.86rem;
+      left: 2rem;
+      color: #666666;
+      margin-left: 0.3rem;
+      font-size: 0.28rem;
+    }
+    .importSubTitle {
+      float: left;
+      margin-left: 0.3rem;
+      margin-right: 0.3rem;
+      color: #999999;
+      font-size: 0.28rem;
+      line-height: 0.86rem;
+    }
+    .importSubTitleWithActive {
+      float: left;
+      margin-left: 0.3rem;
+      margin-right: 0.3rem;
+      color: #FF6200;
+      font-size: 0.28rem;
+      line-height: 0.86rem;
+    }
+    img {
+      float: right;
+      margin-right: 0.3rem;
+      height: 0.24rem;
+      margin-top: 0.3rem;
+    }
+  }
+
+  .border {
+    border-bottom: 1px solid #eeeeee;
+  }
+  .borderCb {
+    border-bottom: 1px solid #eeeeee;
+    height: 0.88rem;
+  }
+}

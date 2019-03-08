@@ -1,0 +1,99 @@
+.loginboxpage{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    .loginBg{
+        position: relative;
+        width: 422px;
+        min-height: 410px;
+        margin: 226px auto 226px auto;
+        box-shadow: 0 0 20px #888888;
+        border: 2px solid #6cb5ff;
+        border-radius: 8px;
+        background: white;
+        h2{
+            font-size: 24px;
+            color: #727272;
+            position: absolute;
+            left: 46px;
+            top: 26px;
+            font-weight: normal;
+        }
+        .closeImg{
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            right: 20px;
+            top: 30px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .mobile{
+            width: 326px;
+            color: #494949;
+            font-size: 16px;
+            height: 33px;
+            line-height: 33px;
+            border: 0;
+            border-bottom: 1px solid black;
+            border-color: rgb(112,183,240);
+            position: absolute;
+            top: 120px;
+            left: 46px;
+        }
+        .mobileinfo{
+            color: #ff5436;
+            position: absolute;
+            left: 46px;
+            font-size: 10px;
+            top: 158px;
+        }
+        .code{
+            position: absolute;
+            top: 175px;
+            right: 48px;
+            width: 90px;
+            height: 35px;
+            background: #55ACEF;
+            color: white;
+            border: 2px solid #6cb5ff;
+            border-radius: 20px;
+            font-size: 14px;
+            line-height: 32px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .loginbtn{
+            width: 332px;
+            height: 50px;
+            line-height: 46px;
+            text-align: center;
+            background: #55ACEF;
+            color: #fff;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 14px;
+            border: 2px solid #6cb5ff;
+            border-radius: 20px;
+            position: absolute;
+            top: 268px;
+            left: 40px;
+            cursor: pointer;
+        }
+        .logintxt{
+            color: #bebebe;
+            font-size: 14px;
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            top: 327px;
+            left: 0;
+        }
+    }
+}

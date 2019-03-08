@@ -62,7 +62,17 @@ module.exports = function (options) {
   }
   var additionalLoaders = [
   ]
-  var alias = {}
+  /**
+   * 配置文件搜索路径
+   */
+  var alias = {
+    'img': path.resolve(__dirname, 'app/img'),
+    'component': path.resolve(__dirname, 'app/routes/pages/component'),
+    'comp': path.resolve(__dirname, 'app/routes/pages/comp'),
+    'api': path.resolve(__dirname, 'app/routes/pages/api'),
+    'fengui': path.resolve(__dirname, 'app/routes/pages/fengui'),
+    'method': path.resolve(__dirname, 'app/routes/pages/method'),
+  }
   var aliasLoader = {}
   var externals = {
     jquery: 'jQuery',
@@ -73,6 +83,9 @@ module.exports = function (options) {
   var modulesDirectories = ['web_modules', 'node_modules']
   var extensions = ['', '.web.js', '.js', '.jsx']
   var root = path.join(__dirname, 'app')
+  /**
+   * 热更新出bug需要手动在webpack/hot/dev-server.js设置更新时自动刷新页面
+   */
   var publicPath = options.devServer
     ? 'http://' + getIp() + ':2992/_assets/':'/'
     // : "//192.168.40.8:9090/public/"
@@ -91,7 +104,7 @@ module.exports = function (options) {
   ]
   var plugins = [
     new webpack.PrefetchPlugin('react'),
-    new webpack.PrefetchPlugin('react/lib/ReactComponentBrowserEnvironment')
+    // new webpack.PrefetchPlugin('react/lib/ReactComponentBrowserEnvironment')
   ]
   if (options.prerender) {
     plugins.push(new StatsPlugin(path.join(buildPath, 'stats.prerender.json'), {
@@ -178,12 +191,14 @@ module.exports = function (options) {
       root: path.join(__dirname, 'node_modules'),
       alias: aliasLoader
     },
+    
     externals: externals,
     resolve: {
       root: root,
       modulesDirectories: modulesDirectories,
       extensions: extensions,
-      alias: alias
+      alias: alias,
+   
     },
     plugins: plugins,
     devServer: {
@@ -194,5 +209,6 @@ module.exports = function (options) {
       disableHostCheck:true
     }
   }
+  
   return webpackConfig
 }

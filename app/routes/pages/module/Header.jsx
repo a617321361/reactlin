@@ -1,11 +1,11 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import styles from './Header.scss'
-import actions from '../fengui/redux/actions'
+import actions from 'fengui/redux/actions'
 import { browserHistory } from 'react-router'
-import {getweather} from '../api/ajax'
-import logo from '../../../img/comp/common_logo.png'
-
+import {getweather} from 'api/ajax'
+import logo from 'img/comp/common_logo.png'
+import Loginbox from 'component/loginbox/login'
 const navlist=[
   {
     name:'首页',
@@ -25,7 +25,7 @@ let Header = React.createClass({
   },
   
   componentDidMount () {
-       
+    
   },
   changenav(url){
     browserHistory.push('/home/main/'+url)
@@ -33,7 +33,7 @@ let Header = React.createClass({
 
   render() {
    let{params}=this.props;
-   
+   let{showloginbox,showLoginBox}=this.props;
   
     return (
       <div className={styles.Headerbox}>
@@ -41,7 +41,7 @@ let Header = React.createClass({
         <div className={styles.navHeader}>
           <div className={styles.header}>
             <p>Hi~ 欢迎来到公象网！</p>
-            <div className={styles.rightinfo}>
+            <div className={styles.rightinfo} onClick={()=>showLoginBox()}>
               <a>登录</a>
               <a>注册</a>
             </div>
@@ -68,6 +68,8 @@ let Header = React.createClass({
             }
           </ul>
         </div>
+
+        {showloginbox&&<Loginbox />}
       </div>
     );
   }
@@ -75,15 +77,20 @@ let Header = React.createClass({
 
 const mapStateToProps = (state) => {
   return {
-   
+   showloginbox:state.vars.showloginbox
     
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    init:()=>{
+     
+    },
+    showLoginBox:()=>{
+      dispatch(actions.setVars('showloginbox',true))
+    }
     
-  
    
   }
 }

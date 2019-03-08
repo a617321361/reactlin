@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import actions from '../../fengui/redux/actions'
+import actions from 'fengui/redux/actions'
 import {browserHistory} from 'react-router'
 import styles from './shield.scss'
 let Component = React.createClass({

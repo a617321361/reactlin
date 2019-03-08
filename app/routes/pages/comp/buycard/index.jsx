@@ -1,12 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import actions from '../../fengui/redux/actions'
+import actions from 'fengui/redux/actions'
 import {browserHistory} from 'react-router'
 import styles from './index.scss'
 import testdata from '../../testdata/data'
-
-import upicon from '../../../../img/icon/up.png'
-import downicon from '../../../../img/icon/down.png'
+import imgdemo from 'img/comp/imgdemo.png'
+import upicon from 'img/icon/up.png'
+import downicon from 'img/icon/down.png'
 
 import { Pagination } from 'antd';
 
@@ -135,7 +135,7 @@ let Component = React.createClass({
                                     onMouseEnter={()=>this.showactcard(valC.goodsId)} 
                                     onMouseLeave={()=>this.showactcard(0)}
                                     >
-                                        <img src={'http://img.gxcards.com/'+valC.fistPicUrl} />
+                                        <img src={imgdemo} />
                                         <p className={styles.txt}>{valC.goodsName}</p>
                                         <p className={styles.price}>￥{(valC.outPrice/100).toFixed(2)}</p>
                                         {cardkey==valC.goodsId&&<p className={styles.enjoygwc}>加入购物车</p>}

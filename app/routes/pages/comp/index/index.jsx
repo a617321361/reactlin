@@ -1,13 +1,13 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import actions from '../../fengui/redux/actions'
+import actions from 'fengui/redux/actions'
 import {browserHistory} from 'react-router'
 import styles from './index.scss'
-import banner from '../../../../img/comp/banner.png'
-import banner2 from '../../../../img/comp/banner2.png'
-
-import bannericon from '../../../../img/icon/bannericon.png'
-import bannericon2 from '../../../../img/icon/bannericon2.png'
+import banner from 'img/comp/banner.png'
+import banner2 from 'img/comp/banner2.png'
+import imgdemo from 'img/comp/imgdemo.png'
+import bannericon from 'img/icon/bannericon.png'
+import bannericon2 from 'img/icon/bannericon2.png'
 
 import testdata from '../../testdata/data'
 
@@ -112,7 +112,7 @@ let Component = React.createClass({
                                                         onMouseEnter={()=>this.showactcard(valC.goodsId)} 
                                                         onMouseLeave={()=>this.showactcard(0)}
                                                         >
-                                                            <img src={'http://img.gxcards.com/'+valC.fistPicUrl} />
+                                                            <img src={imgdemo} />
                                                             <p className={styles.txt}>{valC.goodsName}</p>
                                                             <p className={styles.price}>￥{(valC.outPrice/100).toFixed(2)}</p>
                                                             {cardkey==valC.goodsId&&<p className={styles.enjoygwc}>加入购物车</p>}

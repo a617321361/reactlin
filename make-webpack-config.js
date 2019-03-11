@@ -175,6 +175,7 @@ module.exports = function (options) {
       new webpack.NoErrorsPlugin()
     )
   }
+  console.log(888,entry)
   var webpackConfig = {
     entry: entry,
     output: output,
